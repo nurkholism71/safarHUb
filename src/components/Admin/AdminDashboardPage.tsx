@@ -40,7 +40,7 @@ export const AdminDashboardPage: React.FC<AdminDashboardPageProps> = ({
   onNavigateClientView,
   onOpenActionModal
 }) => {
-  const [activeAdminTab, setActiveAdminTab] = useState('settings'); // Default to settings for user review
+  const [activeAdminTab, setActiveAdminTab] = useState('dashboard');
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
   const handleSelectAdminTab = (tab: string) => {

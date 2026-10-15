@@ -34,7 +34,7 @@ import { TripItem, ServiceItem, CityPin, FlightItem } from './types';
 
 export function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [activeNav, setActiveNav] = useState('admin'); // Default to 'admin' for user review
+  const [activeNav, setActiveNav] = useState('dashboard'); // Default directly to Home
   const [selectedTrip, setSelectedTrip] = useState<TripItem | null>(null);
   const [activeActionModal, setActiveActionModal] = useState<{ id: string; title: string } | null>(null);
   const [showNotifications, setShowNotifications] = useState(false);

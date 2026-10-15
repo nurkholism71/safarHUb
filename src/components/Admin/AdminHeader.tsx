@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   Home,
   Search,
-  Globe,
   Bell,
   ChevronDown,
   Shield,
@@ -32,7 +31,6 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [showProfileMenu, setShowProfileMenu] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState('EN');
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -92,16 +90,7 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
         </form>
 
         {/* Right Action Icons & Admin Profile */}
-        <div className="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
-          {/* Language Selector */}
-          <div className="relative">
-            <button className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-slate-200 text-xs font-medium text-slate-700 hover:bg-slate-50 transition-colors">
-              <Globe className="w-4 h-4 text-slate-500" />
-              <span>{selectedLanguage}</span>
-              <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
-            </button>
-          </div>
-
+        <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
           {/* Notifications Bell */}
           <button
             onClick={onOpenNotifications}
